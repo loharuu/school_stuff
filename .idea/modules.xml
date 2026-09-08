@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Abstrac_factory/Abstrac_factory.iml" filepath="$PROJECT_DIR$/Abstrac_factory/Abstrac_factory.iml" />
       <module fileurl="file://$PROJECT_DIR$/composite/composite.iml" filepath="$PROJECT_DIR$/composite/composite.iml" />
       <module fileurl="file://$PROJECT_DIR$/facor_method/facor_method.iml" filepath="$PROJECT_DIR$/facor_method/facor_method.iml" />
+      <module fileurl="file://$PROJECT_DIR$/observer/observer.iml" filepath="$PROJECT_DIR$/observer/observer.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/school_stuff.iml" filepath="$PROJECT_DIR$/.idea/school_stuff.iml" />
     </modules>
   </component>
