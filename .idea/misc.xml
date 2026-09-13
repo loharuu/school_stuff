@@ -5,6 +5,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/JUnit/pom.xml" />
+        <option value="$PROJECT_DIR$/CodeCovarege/pom.xml" />
       </list>
     </option>
   </component>
