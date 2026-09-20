@@ -14,18 +14,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <dependencies>
-        <!-- JUnit 5 (Jupiter) API for writing tests -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
-            <version>5.14.0</version>
-            <scope>test</scope>
-        </dependency>
-
-        <!-- JUnit 5 engine to actually run the tests -->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
             <version>5.14.0</version>
             <scope>test</scope>
         </dependency>
@@ -63,4 +54,5 @@
         </plugins>
 
     </build>
+
 </project>
