@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/observer/observer.iml" filepath="$PROJECT_DIR$/observer/observer.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/school_stuff.iml" filepath="$PROJECT_DIR$/.idea/school_stuff.iml" />
       <module fileurl="file://$PROJECT_DIR$/singleton/singleton.iml" filepath="$PROJECT_DIR$/singleton/singleton.iml" />
+      <module fileurl="file://$PROJECT_DIR$/state/state.iml" filepath="$PROJECT_DIR$/state/state.iml" />
     </modules>
   </component>
 </project>
