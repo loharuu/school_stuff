@@ -1,9 +1,5 @@
 pipeline {
-    agent {
-    node {
-          customWorkspace '/Docker'
-        }
-    }
+    agent any
     stages {
         stage('Checkout') {
             steps {
