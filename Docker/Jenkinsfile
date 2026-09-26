@@ -28,8 +28,8 @@ pipeline {
         }
         stage('code coverage'){
                    steps{
-                   dir("Docker"){jacoco()
-                   }
+                   jacoco()
+
 
                    }
                }
