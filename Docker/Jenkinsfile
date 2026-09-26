@@ -16,12 +16,14 @@ pipeline {
         }
         stage('Test') {
             steps {
-                bat 'mvn test'
+            dir("Docker") {
+                bat 'mvn test'}
             }
         }
         stage('Code Coverage') {
                 steps {
-                    bat 'mvn jacoco:report'
+                dir("Docker") {
+                    bat 'mvn jacoco:report'}
                 }
             }
         stage('Publish Test Results') {
