@@ -12,7 +12,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git branch: 'OTP1', url: 'https://github.com/loharu/school_stuff.git'
+                git branch: 'OTP1', url: 'https://github.com/loharuu/school_stuff.git'
             }
         }
 
