@@ -22,21 +22,21 @@ pipeline {
         }
         stage('Code Coverage') {
                 steps {
-                dir("Docker") {
+
                     bat 'mvn jacoco:report'}
                 }
-            }
+
         stage('Publish Test Results') {
             steps {
-            dir("Docker") {
+
                 junit '**/target/surefire-reports/*.xml'}
-            }
+
         }
         stage('Publish Coverage Report') {
             steps {
-            dir("Docker") {
+
                 jacoco()}
-            }
+
         }
     }
 }
