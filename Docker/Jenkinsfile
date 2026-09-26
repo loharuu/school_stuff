@@ -26,7 +26,7 @@ pipeline {
                 bat 'mvn test'}
             }
         }
-        stage('jacoco'){
+        stage('code coverage'){
                    steps{
                    dir("Docker"){jacoco()
                    }
