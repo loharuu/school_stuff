@@ -1,7 +1,7 @@
 pipeline {
     agent any
         environment {
-                //PATH = "C:\\Program Files\\Docker\\Docker\\resources\\bin;${env.PATH}"
+                PATH = "C:\\Program Files\\Docker\\Docker\\resources\\bin;${env.PATH}"
                 DOCKERHUB_CREDENTIALS_ID = 'docker'
                 DOCKERHUB_REPO = 'oleruu/otp1'
                 DOCKER_IMAGE_TAG = 'latest'
@@ -12,6 +12,18 @@ pipeline {
                 git branch: 'OTP1', url: 'https://github.com/loharuu/school_stuff.git'
             }
         }
+        stages {
+                stage('Check Docker') {
+                    steps {
+                        bat '''
+                            echo %PATH%
+                            where docker
+                            docker --version
+                            docker info
+                        '''
+                    }
+                }
+            }
         stage('Build') {
             steps {
                 dir("Docker") {
