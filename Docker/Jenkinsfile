@@ -39,6 +39,7 @@ pipeline {
                     dir("Docker") {
                         bat 'mvn test'}
                     }
+                    }
 
         stage('Build Docker Image') {
             steps {
