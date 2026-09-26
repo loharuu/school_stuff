@@ -10,7 +10,7 @@ pipeline {
             steps {
                 //dir("Docker") {
                     bat 'dir'
-                    bat 'mvn clean install'
+                    bat 'mvn -f school_stuff/Docker/pom.xml clean install'
                 //}
                  // sh for linux and ios
             }
