@@ -9,7 +9,6 @@ pipeline {
         stage('Build') {
             steps {
                 dir("Docker") {
-                    sh "pwd"
                     bat 'mvn clean install'
                 }
                  // sh for linux and ios
