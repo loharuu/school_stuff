@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        PATH = "C:\Users\olegd\AppData\Local\Programs\DockerDesktop\resources\bin\docker"
+        PATH = "C:\\Users\\olegd\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker"
         DOCKERHUB_CREDENTIALS_ID = 'docker'
         DOCKERHUB_REPO = 'oleruu/otp1'
         DOCKER_IMAGE_TAG = 'latest'
