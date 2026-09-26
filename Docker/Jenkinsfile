@@ -22,10 +22,10 @@ pipeline {
         }
         stage('Code Coverage') {
                 steps {
-
+                dir("Docker") {
                     bat 'mvn jacoco:report'}
                 }
-
+            }
         stage('Publish Test Results') {
             steps {
 
