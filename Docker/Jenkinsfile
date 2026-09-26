@@ -10,20 +10,19 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'OTP1', url: 'https://github.com/loharuu/school_stuff.git'
-            }
-        }
-        stages {
-                stage('Check Docker') {
-                    steps {
-                        bat '''
-                            echo %PATH%
-                            where docker
-                            docker --version
-                            docker info
-                        '''
-                    }
-                }
-            }
+            }}
+                     }
+
+                     stage('Check Docker') {
+                         steps {
+                             bat '''
+                                 echo %PATH%
+                                 where docker
+                                 docker --version
+                                 docker info
+                             '''
+                         }
+                     }
         stage('Build') {
             steps {
                 dir("Docker") {
