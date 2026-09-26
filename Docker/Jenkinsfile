@@ -26,19 +26,13 @@ pipeline {
                 bat 'mvn test'}
             }
         }
-        stage('Code Coverage') {
-                steps {
-                dir("Docker") {
-                    bat 'mvn jacoco:report'}
-                }
-            }
+        stage('jacoco'){
+                   steps{
+                   dir("Docker"){jacoco()
+                   }
 
-        stage('Publish Coverage Report') {
-            steps {
-
-                jacoco()}
-
-        }
+                   }
+               }
         stage('Build Docker Image') {
                     steps {
                         script {
