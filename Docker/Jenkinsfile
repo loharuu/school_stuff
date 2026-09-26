@@ -28,12 +28,14 @@ pipeline {
             }
         stage('Publish Test Results') {
             steps {
-                junit '**/target/surefire-reports/*.xml'
+            dir("Docker") {
+                junit '**/target/surefire-reports/*.xml'}
             }
         }
         stage('Publish Coverage Report') {
             steps {
-                jacoco()
+            dir("Docker") {
+                jacoco()}
             }
         }
     }
