@@ -3,13 +3,13 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/loharuu/school_stuff.git'
+                git branch: 'OTP1', url: 'https://github.com/loharuu/school_stuff.git'
             }
         }
         stage('Build') {
             steps {
                 dir("Docker") {
-                    bat 'mvn -f Docker/ clean install'
+                    bat 'mvn clean install'
                 }
                  // sh for linux and ios
             }
