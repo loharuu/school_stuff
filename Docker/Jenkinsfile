@@ -8,8 +8,8 @@ pipeline {
         }
         stage('Build') {
             steps {
-                dir("school_stuff/Docker") {
-                    bat 'mvn clean install'
+                dir("Docker") {
+                    bat 'mvn -f Docker/ clean install'
                 }
                  // sh for linux and ios
             }
