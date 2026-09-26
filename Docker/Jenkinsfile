@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 //dir("Docker") {
-                    bat 'mvn -f pom.xml clean install'
+                    bat 'mvn clean install'
                 //}
                  // sh for linux and ios
             }
