@@ -10,8 +10,9 @@ pipeline {
             steps {
                 dir("Docker") {
                     sh "pwd"
+                    bat 'mvn clean install'
                 }
-                bat 'mvn clean install' // sh for linux and ios
+                 // sh for linux and ios
             }
         }
         stage('Test') {
