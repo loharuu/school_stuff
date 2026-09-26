@@ -1,6 +1,6 @@
 import static org.junit.jupiter.api.Assertions.*;
 
-class temperatureconvertertest {
+class TemperatureConverterTest {
 
     temperatureConverter t = new temperatureConverter();
 
