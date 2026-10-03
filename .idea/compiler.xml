@@ -7,10 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Jenkins" />
-        <module name="Docker" />
         <module name="JUnit" />
+        <module name="GuiDocker" />
         <module name="CodeCovarege" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Docker" target="25" />
+    </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,0 +1,57 @@
+pipeline {
+    agent any
+
+    environment {
+        DOCKERHUB_CREDENTIALS_ID = 'docker'
+        DOCKERHUB_REPO = 'oleruu/otp1'
+        DOCKER_IMAGE_TAG = 'latest'
+    }
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                git branch: 'OTP1', url: 'https://github.com/loharuu/school_stuff.git'
+            }
+        }
+        stage('Build') {
+                    steps {
+                        dir("GuiDocker") {
+                            sh 'mvn clean install'
+                        }
+                         // sh for linux and ios
+                    }
+                }
+                stage('Test') {
+                    steps {
+                    dir("GuiDocker") {
+                        sh 'mvn test'}
+                    }
+                    }
+
+        stage('Build Docker Image') {
+            steps {
+                script {
+                dir("GuiDocker") {
+                    docker.build("${DOCKERHUB_REPO}:${DOCKER_IMAGE_TAG}")
+                }}
+            }
+        }
+
+        stage('Push Docker Image to Docker Hub') {
+            steps {
+                script {
+                dir("GuiDocker") {
+                    docker.withRegistry(
+                        'https://index.docker.io/v1/',
+                        DOCKERHUB_CREDENTIALS_ID
+                    ) {
+                        docker.image(
+                            "${DOCKERHUB_REPO}:${DOCKER_IMAGE_TAG}"
+                        ).push()
+                    }}
+                }
+            }
+        }
+    }
+}
