@@ -56,7 +56,7 @@ public class Main extends Application {
                     langToggle.setLocale(languageToggle.SWEDISH);
                     createVision(stage);
                 }else if (rb == r_ar){
-                    langToggle.setLocale(languageToggle.SWEDISH);
+                    langToggle.setLocale(languageToggle.ARABIC);
                     createVision(stage);
                 } else {
                     System.out.println("ohno");
