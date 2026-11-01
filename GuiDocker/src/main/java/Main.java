@@ -20,7 +20,7 @@ import java.util.ResourceBundle;
 public class Main extends Application {
 
     private tempController temp = new tempController();
-    private RadioButton r_en = new RadioButton();private RadioButton r_fi= new RadioButton();private RadioButton r_sv= new RadioButton();private RadioButton r_ja= new RadioButton();
+    private RadioButton r_en = new RadioButton();private RadioButton r_fi= new RadioButton();private RadioButton r_sv= new RadioButton();private RadioButton r_ja= new RadioButton();private RadioButton r_ar= new RadioButton();
     private final languageToggle langToggle = new languageToggle(Locale.ENGLISH);
     private TextField originalDegreeField;
     private TextField convertedDegreeField;
@@ -38,6 +38,7 @@ public class Main extends Application {
         r_fi.setToggleGroup(tg);
         r_ja.setToggleGroup(tg);
         r_sv.setToggleGroup(tg);
+        r_ar.setToggleGroup(tg);
         tg.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
             @Override
             public void changed(ObservableValue<? extends Toggle> observableValue, Toggle toggle, Toggle t1) {
@@ -52,6 +53,9 @@ public class Main extends Application {
                     langToggle.setLocale(languageToggle.JAPANESE);
                     createVision(stage);
                 }else if (rb == r_sv){
+                    langToggle.setLocale(languageToggle.SWEDISH);
+                    createVision(stage);
+                }else if (rb == r_ar){
                     langToggle.setLocale(languageToggle.SWEDISH);
                     createVision(stage);
                 } else {
@@ -116,6 +120,7 @@ public class Main extends Application {
         public static final Locale FINNISH = new Locale("fi", "FI");
         public static final Locale SWEDISH = new Locale("sv", "SE");
         public static final Locale JAPANESE = new Locale("ja", "JP");
+        public static final Locale ARABIC = new Locale("ar", "EG");
         private ResourceBundle translations;
         private final String bundleBasename = "Translations";
 
@@ -148,16 +153,18 @@ public class Main extends Application {
 
         resultLabel = new Label();
 
-        laung.add(new Label(langToggle.getString("en")), 1, 0);
-        laung.add(new Label(langToggle.getString("fin")), 2, 0);
-        laung.add(new Label(langToggle.getString("jp")), 3, 0);
-        laung.add(new Label(langToggle.getString("sw")), 4, 0);
+        laung.add(new Label("English"), 1, 0);
+        laung.add(new Label("Suomeksi"), 2, 0);
+        laung.add(new Label("日本語"), 3, 0);
+        laung.add(new Label("Svenska"), 4, 0);
+        laung.add(new Label("Ar arra ar"),5, 0);
 
         laung.add(new Label(langToggle.getString("language")), 0, 1);
         laung.add(r_en,1, 1);
         laung.add(r_fi,2, 1);
         laung.add(r_ja,3, 1);
         laung.add(r_sv,4, 1);
+        laung.add(r_ar,5, 1);
 
         form.add(new Label(langToggle.getString("tempUnit")), 0, 2);
         form.add(originalTypeComboBox, 1, 2);
