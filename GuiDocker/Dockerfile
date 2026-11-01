@@ -3,17 +3,9 @@ WORKDIR /
 COPY pom.xml .
 COPY src ./src
 
-RUN apt-get install -y locales
-RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
-    locale-gen
-ENV LC_ALL=en_US.UTF-8
-ENV LANG=en_US.UTF-8
-ENV LANGUAGE=en_US:en
-
-
 # Install GUI libraries
 RUN apt-get update && apt-get install -y \
-    libx11-6 libxext6 libxrender1 libxtst6 libxi6 libgtk-3-0 mesa-utils wget unzip \
+    libx11-6 libxext6 libxrender1 libxtst6 libxi6 libgtk-3-0 mesa-utils wget unzip locales \
     && rm -rf /var/lib/apt/lists/*
 
 # Download JavaFX SDK

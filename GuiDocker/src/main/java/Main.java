@@ -157,7 +157,7 @@ public class Main extends Application {
         laung.add(new Label("Suomeksi"), 2, 0);
         laung.add(new Label("日本語"), 3, 0);
         laung.add(new Label("Svenska"), 4, 0);
-        laung.add(new Label("Ar arra ar"),5, 0);
+        laung.add(new Label("عربي"),5, 0);
 
         laung.add(new Label(langToggle.getString("language")), 0, 1);
         laung.add(r_en,1, 1);
