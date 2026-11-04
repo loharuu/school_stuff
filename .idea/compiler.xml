@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="memento" />
+        <module name="proxy" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="CodeCovarege" target="21" />
+      <module name="GuiDocker" target="21" />
       <module name="Jenkins" target="21" />
       <module name="JUnit" target="21" />
       <module name="state" target="21" />
