@@ -9,6 +9,7 @@
         <module name="builder" />
         <module name="memento" />
         <module name="proxy" />
+        <module name="adapter" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
