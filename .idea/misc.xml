@@ -7,6 +7,7 @@
         <option value="$PROJECT_DIR$/state/pom.xml" />
         <option value="$PROJECT_DIR$/memento/pom.xml" />
         <option value="$PROJECT_DIR$/proxy/pom.xml" />
+        <option value="$PROJECT_DIR$/builder/pom.xml" />
       </list>
     </option>
   </component>
