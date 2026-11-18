@@ -6,18 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="builder" />
-        <module name="memento" />
-        <module name="proxy" />
-        <module name="adapter" />
-        <module name="bridge" />
+        <module name="flyweight" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="adapter" target="21" />
+      <module name="bridge" target="21" />
+      <module name="builder" target="21" />
       <module name="CodeCovarege" target="21" />
       <module name="GuiDocker" target="21" />
       <module name="Jenkins" target="21" />
       <module name="JUnit" target="21" />
+      <module name="memento" target="21" />
+      <module name="proxy" target="21" />
       <module name="state" target="21" />
     </bytecodeTargetLevel>
   </component>
