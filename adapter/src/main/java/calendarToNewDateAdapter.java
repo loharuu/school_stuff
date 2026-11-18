@@ -37,7 +37,6 @@ public class calendarToNewDateAdapter implements newDateInterface{
 
     @Override
     public void advanceDays(int days) {
-        int currentDay = c.get(Calendar.DAY_OF_MONTH);
-        c.set(Calendar.DAY_OF_MONTH, days + currentDay);
+        c.set(Calendar.DAY_OF_MONTH, days);
     }
 }
