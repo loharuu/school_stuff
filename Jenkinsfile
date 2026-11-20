@@ -1,10 +1,10 @@
 pipeline {
     agent any
 
-    tools {
+    //tools {
         //maven 'Maven3'   // Must match the name configured in Jenkins Global Tool Configuration
-       sonarQubeScanner 'sonarscanner'
-    }
+       //sonarQubeScanner 'sonarscanner'
+    //}
 
     environment {
         // these are the environment variables (Amir's machine) that will be used in the pipeline
