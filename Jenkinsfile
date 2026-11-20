@@ -11,8 +11,8 @@ pipeline {
        //JAVA_HOME = 'C:\\Program Files\\Java\\jdk-21'  // Adjust to your actual JDK path
 
 
-        SONARQUBE_SERVER = 'XXXXX'
-        SONAR_TOKEN = credentials('XXXXX') //make sure a right token is selected
+        SONARQUBE_SERVER = 'http://localhost:9000'
+        SONAR_TOKEN = credentials('sonar') //make sure a right token is selected
         DOCKERHUB_CREDENTIALS_ID = 'docker'
         DOCKERHUB_REPO = 'oleruu/bmi_3013_oleg'
         DOCKER_IMAGE_TAG = 'latest'
@@ -21,7 +21,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'OTP2_', url: 'YOUR own project github repo'
+                git branch: 'OTP2_RTL_BMI_Solution_Instructions', url: 'github.com/loharuu/school_stuff'
             }
         }
 
