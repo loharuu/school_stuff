@@ -3,7 +3,7 @@ pipeline {
 
     tools {
         //maven 'Maven3'   // Must match the name configured in Jenkins Global Tool Configuration
-        sonarRunner 'SonarScanner'
+        //sonarRunner 'SonarScanner'
    }
 
     environment {
