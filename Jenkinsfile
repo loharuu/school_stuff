@@ -1,9 +1,9 @@
 pipeline {
     agent any
 
-    tools {
-        maven 'Maven3'   // Must match the name configured in Jenkins Global Tool Configuration
-    }
+    //tools {
+        //maven 'Maven3'   // Must match the name configured in Jenkins Global Tool Configuration
+   // }
 
     environment {
         // these are the environment variables (Amir's machine) that will be used in the pipeline
