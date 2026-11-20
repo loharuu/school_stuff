@@ -11,7 +11,7 @@ pipeline {
        //JAVA_HOME = 'C:\\Program Files\\Java\\jdk-21'  // Adjust to your actual JDK path
 
 
-        SONARQUBE_SERVER = 'http://localhost:9000'
+        SONARQUBE_SERVER = 'sonarqube'
         SONAR_TOKEN = credentials('sonar') //make sure a right token is selected
         DOCKERHUB_CREDENTIALS_ID = 'docker'
         DOCKERHUB_REPO = 'oleruu/bmi_3013_oleg'
