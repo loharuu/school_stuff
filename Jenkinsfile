@@ -27,20 +27,20 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'mvn clean install'
+                sh 'mvn clean install'
             }
         }
 
         stage('Test') {
             steps {
-                bat 'mvn test'
+                sh 'mvn test'
             }
         }
 // Check the SonarQube analysis stage for the correct project key and name
         stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv("${env.SONARQUBE_SERVER}") {
-                    bat """
+                    sh """
                         sonar-scanner ^
                         -Dsonar.projectKey=BMI_CL ^
                         -Dsonar.sources=src ^
