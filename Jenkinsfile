@@ -21,7 +21,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'OTP2_RTL_BMI_Solution_Instructions', url: 'github.com/loharuu/school_stuff.git'
+                git branch: 'OTP2_RTL_BMI_Solution_Instructions', url: 'https://github.com/loharuu/school_stuff.git'
             }
         }
 
